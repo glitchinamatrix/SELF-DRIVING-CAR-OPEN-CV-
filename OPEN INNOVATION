@@ -1,3 +1,5 @@
+OPEN IDEA:Criminal detection-Using VMD
+
 import cv2
 
 # Load the pre-trained Haarcascades face classifier
