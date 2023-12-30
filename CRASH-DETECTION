@@ -1,0 +1,29 @@
+import cv2
+import numpy as np
+
+class CrashDetectionSystem:
+    def __init__(self, threshold):
+        self.threshold = threshold
+
+    def detect_crash(self, frame):
+        # Assuming frame is a grayscale image
+        average_pixel_value = np.mean(frame)
+        if average_pixel_value > self.threshold:
+            return True
+        else:
+            return False
+
+# Example usage
+if __name__ == "__main__":
+    # Initialize the crash detection system with a specific threshold
+    crash_detection_system = CrashDetectionSystem(threshold=10)
+
+    # Simulate a frame (replace this with real image data in a real-world scenario)
+    frame = np.random.randint(0, 255, (100, 100), dtype=np.uint8)
+
+    # Check for a crash
+    if crash_detection_system.detect_crash(frame):
+        print("Crash detected!")
+    else:
+        print("No crash detected.")
+Crash detected!
